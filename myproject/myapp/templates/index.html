@@ -1,0 +1,26 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Tunes</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <h1>🎧🎶MoodTunes 🎶🎧</h1>
+  <p>Select your mood:</p>
+  <div class="mood-buttons">
+    <button data-mood="happy">😁 Happy</button>
+    <button data-mood="sad">😔 Sad</button>
+    <button data-mood="relaxed">😎 Relaxed</button>
+    <button data-mood="energetic">💪 Energetic</button>
+    <button data-mood="romantic">💖 Romantic</button>
+    <button data-mood="nostalgic">🕰️ Nostalgic</button>
+    <button data-mood="monsoon">🌧️ Monsoon</button>
+  </div>
+  <div id="music-display"></div>
+  <div id="emoji-container"></div>
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

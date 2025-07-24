@@ -1,0 +1,113 @@
+body {
+  background-image: url("../images/image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2em;
+
+} 
+.mood-buttons {
+  margin-top: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.mood-buttons.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mood-buttons button {
+  font-size: 1.2em;
+  margin: 1em;
+  padding: 0.6em 1.2em;
+  border: solid 2px gray;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+} 
+.mood-buttons button:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+button[data-mood="happy"]:hover {
+  background-color: yellow;
+  color: #6a1b9a;
+  box-shadow: 0 0 15px #ffe082;
+}
+button[data-mood="sad"]:hover {
+  background-color: lightgray;
+  color: #424242;
+  box-shadow: 0 0 15px #90caf9;
+}
+button[data-mood="relaxed"]:hover {
+  background-color: greenyellow;
+  color: #004d40;
+  box-shadow: 0 0 15px #b2dfdb;
+}
+button[data-mood="energetic"]:hover {
+  background-color: orange;
+  color: #bf360c;
+  box-shadow: 0 0 15px #ffcc80;
+}
+button[data-mood="romantic"]:hover {
+  background-color: pink;
+  color: #880e4f;
+  box-shadow: 0 0 15px #f8bbd0;
+}
+button[data-mood="nostalgic"]:hover {
+  background-color: wheat;
+  color: #5d4037;
+  box-shadow: 0 0 15px #ff8a80;
+}
+button[data-mood="monsoon"]:hover {
+  background-color: lightblue;
+  color: #01579b;
+  box-shadow: 0 0 15px #81d4fa;
+}
+#music-display {
+  margin-top: 2em;
+} 
+#music-display iframe {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+#emoji-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+.floating-emoji {
+  position: absolute;
+  font-size: 2rem;
+  animation: float-up 2s ease-out forwards;
+}
+@keyframes float-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .login-container {
+    max-width: 90%;
+    padding: 10px;
+  }
+}
+ 
